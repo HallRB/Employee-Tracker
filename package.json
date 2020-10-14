@@ -1,28 +1,27 @@
 {
-    "name": "Homework_12",
-    "version": "1.0.0",
-    "description": "This interface makes it easier for non-developers to view and interact with information stored in a CMS (Content Management Systems) database.  This app will manage the company's employees using node, inquirer, and MySQL."
-    "main": "index.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "node index"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/HallRB/Homework_12"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-      "url": "https://github.com/HallRB/Homework_12/issues"
-    },
-    "homepage": "https://github.com/HallRB/Homework_12/blob/main/README.md",
-    "dependencies": {
-      "console.table": "^0.10.0",
-      "inquirer": "^7.0.0",
-      "mysql": "^2.17.1"
-    },
-    "devDependencies": {}
-  }
-  
+  "name": "Homework_12",
+  "version": "1.0.0",
+  "description": "An app for managing a company's employees using node, inquirer, and MySQL.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HallRB/Homework_12"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HallRB/Homework_12/issues"
+  },
+  "homepage": "https://github.com/HallRB/Homework_12",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^7.3.3",
+    "mysql": "^2.17.1"
+  },
+  "devDependencies": {}
+}
