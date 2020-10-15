@@ -1,7 +1,6 @@
 const mysql = require("mysql");
 const inquirer = require("inquirer");
 require("console.table");
-// const sql = require("./sql");
 
 var connection = mysql.createConnection({
   host: "localhost",
@@ -11,14 +10,12 @@ var connection = mysql.createConnection({
   database: "employees"
 });
 
-// connect to the mysql server and sql database
+
 connection.connect(function (err) {
   if (err) throw err;
-  // run the start function after the connection is made to prompt the user
   firstPrompt();
 });
 
-// function which prompts the user for what action they should take
 function firstPrompt() {
 
   inquirer
@@ -61,13 +58,6 @@ function firstPrompt() {
         case "Add Role":
           addRole();
           break;
-        // case "Remove Role":
-        //   removeRole();
-        //   break;
-
-        // case "Update Employee MAnager":
-        //   updateEmployeeManager();
-        //   break;
 
         case "End":
           connection.end();
@@ -76,7 +66,7 @@ function firstPrompt() {
     });
 }
 
-//////////////////========================= 1."View Employees"/ READ all, SELECT * FROM
+//"View Employees"/ READ all, SELECT * FROM
 
 function viewEmployee() {
   console.log("Viewing employees\n");
@@ -102,7 +92,7 @@ function viewEmployee() {
   // console.log(query.sql);
 }
 
-//========================================= 2."View Employees by Department" / READ by, SELECT * FROM
+//2. "View Employees by Department" / READ by, SELECT * FROM
 
 // Make a department array
 
@@ -174,11 +164,8 @@ function promptDepartment(departmentChoices) {
     });
 }
 
-//========================================= 3."View Employees by Manager"
 
-
-
-//========================================= 4."Add Employee" / CREATE: INSERT INTO
+// 4."Add Employee" / CREATE: INSERT INTO
 
 // Make a employee array
 
@@ -254,7 +241,7 @@ function promptInsert(roleChoices) {
     });
 }
 
-//========================================= 5."Remove Employees" / DELETE, DELETE FROM
+// 5."Remove Employees" / DELETE, DELETE FROM
 
 // Make a employee array to delete
 
@@ -308,7 +295,7 @@ function promptDelete(deleteEmployeeChoices) {
     });
 }
 
-//========================================= 6."Update Employee Role" / UPDATE,
+// 6."Update Employee Role" / UPDATE,
 
 function updateEmployeeRole() { 
   employeeArray();
@@ -403,7 +390,7 @@ function promptEmployeeRole(employeeChoices, roleChoices) {
 
 
 
-//////////////////========================= 7."Add Role" / CREATE: INSERT INTO
+// 7."Add Role" / CREATE: INSERT INTO
 
 function addRole() {
 
@@ -419,7 +406,6 @@ function addRole() {
   connection.query(query, function (err, res) {
     if (err) throw err;
 
-    // (callbackfn: (value: T, index: number, array: readonly T[]) => U, thisArg?: any)
     const departmentChoices = res.map(({ id, name }) => ({
       value: id, name: `${id} ${name}`
     }));
@@ -472,6 +458,3 @@ function promptAddRole(departmentChoices) {
 
     });
 }
-
-
-//========================================= 8."Remove Role"
