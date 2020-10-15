@@ -12,9 +12,9 @@ VALUES ("Quality Control");
 INSERT INTO role (title, salary, department_id)
 VALUES ("Sales Rep", 100000, 1);
 INSERT INTO role (title, salary, department_id)
-VALUES ("Operations Manager", 150000, 2);
+VALUES ("General Manager", 150000, 2);
 INSERT INTO role (title, salary, department_id)
-VALUES ("Payroll Administrator", 120000, 2);
+VALUES ("Operations Manager", 120000, 2);
 INSERT INTO role (title, salary, department_id)
 VALUES ("Accountant", 125000, 3);
 INSERT INTO role (title, salary, department_id)
