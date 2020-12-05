@@ -1,39 +1,33 @@
-USE employeesDB;
+use employees;
 
-INSERT INTO department (name)
-VALUES ("Sales");
-INSERT INTO department (name)
-VALUES ("Operations");
-INSERT INTO department (name)
-VALUES ("Payroll");
-INSERT INTO department (name)
-VALUES ("Quality Control");
+INSERT INTO department
+    (name)
+VALUES
+    ('Sales'),
+    ('Engineering'),
+    ('Finance'),
+    ('Legal');
 
-INSERT INTO role (title, salary, department_id)
-VALUES ("Sales Rep", 100000, 1);
-INSERT INTO role (title, salary, department_id)
-VALUES ("General Manager", 150000, 2);
-INSERT INTO role (title, salary, department_id)
-VALUES ("Operations Manager", 120000, 2);
-INSERT INTO role (title, salary, department_id)
-VALUES ("Accountant", 125000, 3);
-INSERT INTO role (title, salary, department_id)
-VALUES ("Technition", 250000, 4);
+INSERT INTO role
+    (title, salary, department_id)
+VALUES
+    ('Sales Lead', 100000, 1),
+    ('Salesperson', 80000, 1),
+    ('Lead Engineer', 150000, 2),
+    ('Software Engineer', 120000, 2),
+    ('Account Manager', 160000, 3),
+    ('Accountant', 125000, 3),
+    ('Legal Team Lead', 250000, 4),
+    ('Lawyer', 190000, 4);
 
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("Parrth", "Upadhyaya", 1, 3);
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("Josh", "Diez", 2, 1);
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("Sierra", "Randle", 3, null);
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("Page", "Brower", 4, 3);
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("William", "Robey", 5, null);
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("Alicia", "Perez", 2, null);
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("Alex", "Alvarez", 4, 7);
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("Ian", "Meffert", 1, 2);
-
+INSERT INTO employee
+    (first_name, last_name, role_id, manager_id)
+VALUES
+    ('John', 'Doe', 1, NULL),
+    ('Mike', 'Chan', 2, 1),
+    ('Ashley', 'Rodriguez', 3, NULL),
+    ('Kevin', 'Tupik', 4, 3),
+    ('Kunal', 'Singh', 5, NULL),
+    ('Malia', 'Brown', 6, 5),
+    ('Sarah', 'Lourd', 7, NULL),
+    ('Tom', 'Allen', 8, 7);
